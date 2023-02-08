@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8"
+    <title>ML API</title>
+</head>
+<body>
+ <div class= "Login">
+    <h1>Predict House Price</h1>
+<form action="{{ url_for('predict') }}" method="post">
+        <legend>Input values:</legend>
+        Avg. Area Income:
+        <input name="Avg. Area Income" type="text" required>
+        <br>
+        <br> Avg. Area House Age:
+        <input name="Avg. Area House Age" type="text" required>
+        <br>
+        <br> Avg. Area Number of Rooms:
+        <input name="Avg. Area Number of Rooms" type="text" required>
+        <br>
+        <br> Avg. Area Number of Bedrooms:
+        <input name="Avg. Area Number of Bedrooms" type="text" required>
+        <br>
+        <br> Area Population:
+        <input name="Area Population" type="text" required>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</div>
+
+<body>
+</html>
